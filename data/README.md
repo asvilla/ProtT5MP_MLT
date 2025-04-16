@@ -43,6 +43,9 @@ En esta carpeta  `/data/preprocessed` se tienen los sets de datos que utilizamos
   - train: Conjunto de entrenamiento.
   - val: Conjunto de validación.
   - test: Conjunto de prueba.
+ 
+## Embeddings
+En esta carpeta  `/data/embeddings` se tienen embeddings de secuencia y estructura obtenidos. Dato que son datos pesados que no pueden tenerse en el repositorio, en su lugar se tiene un link al drive externo que los contiene.
 
 ### **Referencias**
 
