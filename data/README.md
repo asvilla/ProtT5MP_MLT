@@ -11,7 +11,7 @@ En esta carpeta  `/data/raw` se tienen los sets de datos utilizados en el artíc
 ## preprocessed
 En esta carpeta  `/data/preprocessed` se tienen los sets de datos que utilizamos en nuestro proyecto, los cuales se basan en los datos raw de TemBERTure [1] y secuencias descargadas de la base de datos Alphafold [2].
 
-* **preprocessed_data.tar.gz** (Se tiene como link a drive externo ya que es muy pesado par Github)
+* **preprocessed_data.tar.gz** 
     - *train_preprocessed.txt*: Conjunto de entrenamiento.
   - *val_preprocessed.txt*: Conjunto de validación.
   - *test_preprocessed.txt*: Conjunto de prueba.
@@ -38,6 +38,7 @@ En esta carpeta  `/data/preprocessed` se tienen los sets de datos que utilizamos
 
 * **estructuras.tar.gz**
   
+  (Se tiene como link a drive externo ya que es muy pesado par Github)
   Contiene las estructuras en formato `pdb.gz` distribuidas entre las carpetas `/estructuras/train`, `/estructuras/val` y `/estructuras/test`.
   - train: Conjunto de entrenamiento.
   - val: Conjunto de validación.
