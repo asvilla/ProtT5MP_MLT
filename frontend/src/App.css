@@ -1,0 +1,40 @@
+/* src/App.css */
+/* Add any custom styles here */
+
+.custom-hr {
+  width: 80%;
+  border-top: 2px solid #007bff;
+  margin: 20px auto;
+}
+
+.temperature-display {
+  font-family: 'Arial', sans-serif;
+}
+
+.results-card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+  margin-top: auto;
+}
+
+
+
+/* Animation for button pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
