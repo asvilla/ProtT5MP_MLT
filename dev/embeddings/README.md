@@ -3,12 +3,12 @@ La carpeta `/dev/embeddings` contiene los diferentes archivos .`ipynb` y .`py` u
 
 Se realizaron 2 tipos de embeddings: estructura y secuencia.
 
-### Secuencia
+#### Secuencia
 * Seqvec
 * ProtT5_XL_U50
 * ProtBERT BFD
 
-### Estructura
+#### Estructura
 * Prost5
 
 ### Seqvec.py
