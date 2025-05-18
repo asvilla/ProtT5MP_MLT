@@ -45,7 +45,7 @@ En esta carpeta  `/data/preprocessed` se tienen los sets de datos que utilizamos
   - test: Conjunto de prueba.
  
 ## Embeddings
-En esta carpeta  `/data/embeddings` se tienen embeddings de secuencia y estructura obtenidos. Dato que son datos pesados que no pueden tenerse en el repositorio, en su lugar se tiene un link al drive externo que los contiene.
+En esta carpeta  `/data/embeddings` en nuestro proyecto original se tienen guardados los embeddings de secuencia y estructura obtenidos en formato `.npy` para los distintos experimentos. Sin embargo, dado que son datos pesados no pueden tenerse en el repositorio, se podrán enviar a dispocisión de quien lo necesite. Considerando que nuestro modelo final ProT5MP solo requiere secuencias, en el codigo completo donde se hace  entrenamiento y finetuning internamente se hace el embedding, por lo cual no es necesario los embeddings para correr nuestro modelo final. Los codigos utilizados para generar cada embedding se encuentran en la carpeta `/data/embeddings`.
 
 ### **Referencias**
 
