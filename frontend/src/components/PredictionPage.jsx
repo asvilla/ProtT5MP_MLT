@@ -44,24 +44,42 @@ const PredictionPage = () => {
     }
     
     setLoading(true);
+    setError(''); // Clear previous errors
+    setResults(null); // Clear previous results
     
     try {
-      // In a real app, this would be an API call
-      // Simulating API call with timeout
-      setTimeout(() => {
-        // Mock result - replace with actual API call
-        const mockResult = {
-          predictedTemperature: (35 + Math.random() * 40).toFixed(1),
-          confidenceScore: 0.7 + (Math.random() * 0.25),
-          probabilities: [0.2, 0.3, 0.5]
-        };
-        
-        setResults(mockResult);
-        setLoading(false);
-      }, 1500);
+        const response = await fetch('http://localhost:8000/predict', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          protein_sequence: sequence,
+        }),
+      });
+  
+      if (!response.ok) {
+        let errorDetail = 'Error al realizar la predicción'; // Default error
+        try {
+          // Try to parse a JSON error response from the backend
+          const errorData = await response.json();
+          if (errorData && errorData.detail) {
+            errorDetail = errorData.detail; // Use backend-provided error message
+          }
+        } catch {
+          // If parsing JSON fails, use status text or a generic message
+          errorDetail = `Error: ${response.status} ${response.statusText || 'Network response was not ok'}`;
+        }
+        throw new Error(errorDetail);
+      }
+  
+      const data = await response.json();
+      console.log('Respuesta del Servidor:', data);
+      setResults(data);
     } catch (err) {
       console.error(err);
-      setError('Error processing your request. Please try again.');
+      setError(err.message || 'Error processing your request. Please try again.');
+    } finally {
       setLoading(false);
     }
   };
@@ -134,26 +152,28 @@ const PredictionPage = () => {
                 Prediction Results
               </Card.Header>
               <Card.Body>
-                <Row>
+                <Row className='justify-content-center'>
                   {/* Temperature Result */}
                   <Col md={6} className="text-center mb-4">
                     <h3>Predicted Melting Temperature</h3>
                     <div className="temperature-display" style={{ 
                       fontSize: '3rem', 
                       fontWeight: 'bold',
-                      color: '#007bff'
+                      color: '#007bff',                      
                     }}>
-                      {results.predictedTemperature}°C
+                      {Math.round(results.predicted_tm)}°C
                     </div>
-                    <p className="mt-2">Confidence Score: {(results.confidenceScore * 100).toFixed(1)}%</p>
+                    {/*<p className="mt-2">Confidence Score: {(results.confidence_score * 100).toFixed(1)}%</p>*/}
                   </Col>
-                  
+
+                  {/*<console className="log">{JSON.stringify(results, null, 2)}</console>*/}
+
                   {/* Chart */}
-                  <Col md={6}>
+                  {/* <Col md={6}>
                     <h4 className="text-center mb-3">Stability Analysis</h4>
                     <Bar
                       data={{
-                        labels: ['Low Temp', 'Medium Temp', 'High Temp'],
+                        labels: ['Low Temp', 'High Temp'],
                         datasets: [{
                           label: 'Probability Distribution',
                           data: results.probabilities,
@@ -179,7 +199,7 @@ const PredictionPage = () => {
                         }
                       }}
                     />
-                  </Col>
+                  </Col> */}
                 </Row>
                 
                 <hr />
@@ -189,9 +209,9 @@ const PredictionPage = () => {
                   <h5>What does this mean?</h5>
                   <p>
                     The predicted melting temperature of {results.predictedTemperature}°C indicates 
-                    {parseFloat(results.predictedTemperature) > 60 
+                    {parseFloat(results.predicted_tm) > 60 
                       ? ' a relatively high thermal stability. This protein should maintain its structure and function at elevated temperatures.'
-                      : parseFloat(results.predictedTemperature) > 45
+                      : parseFloat(results.predicted_tm) > 45
                         ? ' a moderate thermal stability. This protein should be stable at room temperature but may denature at elevated temperatures.'
                         : ' a relatively low thermal stability. This protein may be sensitive to temperature changes and could denature easily.'
                     }

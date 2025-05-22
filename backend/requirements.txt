@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pandas
+joblib
+scikit-learn
+num2words
+nltk
+pydantic
+openpyxl
+torch
+transformers
+sentencepiece
+hf_xet
