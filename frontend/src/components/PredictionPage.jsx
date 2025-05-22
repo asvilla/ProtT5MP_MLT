@@ -161,7 +161,7 @@ const PredictionPage = () => {
                       fontWeight: 'bold',
                       color: '#007bff',                      
                     }}>
-                      {Math.round(results.predicted_tm)}°C
+                      {results.predicted_tm.toFixed(2)}°C
                     </div>
                     {/*<p className="mt-2">Confidence Score: {(results.confidence_score * 100).toFixed(1)}%</p>*/}
                   </Col>
@@ -208,7 +208,7 @@ const PredictionPage = () => {
                 <div className="mt-4">
                   <h5>What does this mean?</h5>
                   <p>
-                    The predicted melting temperature of {results.predictedTemperature}°C indicates 
+                    The predicted melting temperature of {results.predicted_tm.toFixed(2)}°C indicates 
                     {parseFloat(results.predicted_tm) > 60 
                       ? ' a relatively high thermal stability. This protein should maintain its structure and function at elevated temperatures.'
                       : parseFloat(results.predicted_tm) > 45
