@@ -1,5 +1,7 @@
 # ProtT5MP 
-
+<div align="center">
+  <img src="ProtT5MP/Logo_ProtT5MP.png" alt="Descripción" width="250"/>
+</div>
 Tras comparar todos los embeddings y diferentes modelos a partir de los experimentos que se encuentran en la carpeta `dev/`. Se encontró que los embeddings basados en el modelo pre-entrenado Prot_T5_XL_U50 fueron los de mejor desempeño. Por este motivo se seleccionó este modelo para realizar un fine-tuning con LORA y de esta manera obtener nuestro modelo final del proyecto para la predicción de Temperatura de Fusión (Tm) basandose únicamente en datos de secuencia.
 
 Esta carpeta contiene nuestro codigo para realizar fine-tuning con LoRA, el codigo es una adaptación de un codigo guía para fine-tuning de Prot_T5_XL_U50 del repositorio de ProtTrans (https://github.com/agemagician/ProtTrans/tree/master) [1].
