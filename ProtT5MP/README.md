@@ -36,3 +36,5 @@ metricas
 [2] Chiara Rodella, Symela Lazaridi, Thomas Lemmin, TemBERTure: advancing protein thermostability prediction with deep learning and attention mechanisms, Bioinformatics Advances, Volume 4, Issue 1 (2024). https://doi.org/10.1093/bioadv/vbae103
 
 [3] Varadi, M. et al. “AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models.” Nucleic Acids Research, 50(D1), pages D439–D444 (2021). https://doi.org/10.1093/nar/gkab1061
+
+Logo generado con asistencia de inteligencia artificial (ChatGPT, OpenAI).
