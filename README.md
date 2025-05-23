@@ -1,6 +1,10 @@
-# 🧬 ProtT5MP: Predicción de la estabilidad térmica de proteínas mediante un enfoque exploratorio basado en secuencia y estructura
+# ProtT5MP
 
-<img src="ProtT5MP/Logo_ProtT5MP.png" alt="Descripción" width="400"/>
+<div align="center">
+  <img src="ProtT5MP/Logo_ProtT5MP.png" alt="Descripción" width="250"/>
+</div>
+
+### Predicción de la estabilidad térmica de proteínas mediante un enfoque exploratorio basado en secuencia y estructura
 
 Este repositorio contiene el código, datos y resultados del proyecto final del curso *Machine Learning Techniques*, donde se evaluaron modelos de regresión para predecir la temperatura de fusión (Tm) de proteínas a partir de representaciones embebidas de su secuencia y estructura. Finalmente se seleccionó el mejor modelo que fue basado unicamente en secuencia y se denominó ProtT5MP.
 
@@ -44,4 +48,4 @@ Las instrucciones o guía de entrenamiento se encuentran en la carpeta ProtT5MP 
 
 ## 📬 Contacto
 
-Proyecto realizado por [Ana Sofía Villa Benavides],[Julieth Zamara Rincón​],[Natalia Andrea Duarte​],[Santiago Alejandro Jaimes​], estudiantes de la Universidad de los Andes.  
+Proyecto realizado por Ana Sofía Villa Benavides ,Julieth Zamara Rincón​,Natalia Andrea Duarte​ y Santiago Alejandro Jaimes​, estudiantes de la Universidad de los Andes.  
