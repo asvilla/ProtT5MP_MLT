@@ -1,6 +1,6 @@
 # ProtT5MP 
 <div align="center">
-  <img src="ProtT5MP/Logo_ProtT5MP.png" alt="Descripción" width="250"/>
+  <img src="Logo_ProtT5MP.png" alt="Descripción" width="250"/>
 </div>
 Tras comparar todos los embeddings y diferentes modelos a partir de los experimentos que se encuentran en la carpeta `dev/`. Se encontró que los embeddings basados en el modelo pre-entrenado Prot_T5_XL_U50 fueron los de mejor desempeño. Por este motivo se seleccionó este modelo para realizar un fine-tuning con LORA y de esta manera obtener nuestro modelo final del proyecto para la predicción de Temperatura de Fusión (Tm) basandose únicamente en datos de secuencia.
 
