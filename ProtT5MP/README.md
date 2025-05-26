@@ -24,7 +24,7 @@ Para poder realizar finetuning, se juntan todas las particiones originales de lo
 En nuestro estudio hicimos finetuning del modelo por 20 epocas, teniendo en cuenta que este notebook es explicativo, solo se corrieron 5 epocas dado el tiempo y la demanda computacional que esto requiere.
 
 ## Evaluacion
-La evaluación del modelo se reañizó con las siguientes métricas: coeficiente de determinación (R²),  error absoluto medio (MAE) y error cuadrático medio (MSE).
+La evaluación del modelo se realizó con las siguientes métricas: coeficiente de determinación (R²),  error absoluto medio (MAE) y error cuadrático medio (MSE).
 
 ## Guardar el modelo /pesos
 Los pesos entrenados de LoRa de guardaron en un archivo .pth
