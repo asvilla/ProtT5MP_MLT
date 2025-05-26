@@ -27,7 +27,7 @@ En nuestro estudio hicimos finetuning del modelo por 20 epocas, teniendo en cuen
 La evaluación del modelo se realizó con las siguientes métricas: coeficiente de determinación (R²),  error absoluto medio (MAE) y error cuadrático medio (MSE).
 
 ## Guardar el modelo /pesos
-Los pesos entrenados de LoRa de guardaron en un archivo .pth
+Los pesos entrenados de LoRA de guardaron en un archivo .pth
 
 
 
