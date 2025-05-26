@@ -11,7 +11,7 @@ Se realizaron 2 tipos de embeddings: estructura y secuencia.
 #### Estructura
 * Prost5
 
-### Seqvec.py
+### SeqVec.py
 
     En este archivo se generan embeddings con Seqvec (CITA)
     
@@ -24,7 +24,7 @@ Se realizaron 2 tipos de embeddings: estructura y secuencia.
 ### Foldseek_3di.py
     Para poder realizar el embedding con Prost5 se debe tener como archivo de entrada en vez de archivo PDB una secuencia 3DI, en este codigo se hace la transformación de formato con Foldseek y ... (CITA)
     
-### Prost5.py
+### Prost5.ipynb
     En este archivo se generan embeddings con Seqvec (CITA)
 
 ## Referencias
