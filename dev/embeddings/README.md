@@ -4,9 +4,9 @@ La carpeta `/dev/embeddings` contiene los diferentes archivos .`ipynb` y .`py` u
 Se realizaron 2 tipos de embeddings: estructura y secuencia.
 
 #### Secuencia
-* Seqvec
-* ProtT5_XL_U50
-* ProtBERT BFD
+* SeqVec
+* ProtT5-XL-U50
+* ProtBert-BFD
 
 #### Estructura
 * Prost5
@@ -16,16 +16,16 @@ Se realizaron 2 tipos de embeddings: estructura y secuencia.
     En este archivo se generan embeddings con Seqvec [1]
     
 ### ProtBert.py
-    En este archivo se generan embeddings con Seqvec [2]
+    En este archivo se generan embeddings con ProtBert-BFD [2]
     
 ### ProtT5_XL_U50.py
-    En este archivo se generan embeddings con Seqvec [2]
+    En este archivo se generan embeddings con ProtT5-XL-U50 [2]
     
 ### Foldseek_3di.py
-    Para poder realizar el embedding con Prost5 se debe tener como archivo de entrada en vez de archivo PDB una secuencia 3DI, en este codigo se hace la transformación de formato con Foldseek y ... [3]
+    Para poder realizar el embedding con Prost5 se debe tener como archivo de entrada en vez de archivo PDB una secuencia 3DI, en este        codigo se hace la transformación de formato con Foldseek y ... [3]
     
 ### Prost5.ipynb
-    En este archivo se generan embeddings con Seqvec [4]
+    En este archivo se generan embeddings con Prost5 [4]
 
 ## Referencias
 [1] Heinzinger, M., Elnaggar, A., Wang, Y., Dallago, C., Nechaev, D., Matthes, F., & Rost, B. (2019). Modeling aspects of the language of life through transfer-learning protein sequences. BMC Bioinformatics, 20(1), 1–17. https://doi.org/10.1186/S12859-019-3220-8/FIGURES/5
