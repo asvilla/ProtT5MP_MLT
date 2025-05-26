@@ -20,6 +20,7 @@ Se entrenaron y evaluaron 5 modelos diferentes para cada combinación de embeddi
 7. Prost5 -ProtBERT
 
 *Finetuning*
+
 Se realizó finetuning al modelo que mostró el mejor desempeño en la producción de embeddings ProtT5-XL-U50. Aunque en nuestro estudio realizamos finetunig utilizando tanto las particiones utilizadas por [Rodella et al. (2024)](https://academic.oup.com/bioinformaticsadvances/article/4/1/vbae103/7713394) (96:2:2) en TemBERTure, en el notebook de finetuning de este repositorio (ProtT5_finetuning.ipynb) solo se incluye las particiones 80:10:10 con las que fue esntrenado nuestro modelo con mejor desempeño ProtT5MP. Asimismo, en nuestro estudio hicimos finetunig del modelo por 20 epocas, teniendo en cuenta que este notebook es explicativo, solo se corrieron 5 epocas dado el tiempo y la demanda computacional que esto requiere.
 
 ## Archivos
