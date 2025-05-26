@@ -15,7 +15,7 @@ Se realizaron 2 tipos de embeddings: estructura y secuencia.
 
     En este archivo se generan embeddings con Seqvec (CITA)
     
-### Protbert.py
+### ProtBert.py
     En este archivo se generan embeddings con Seqvec (CITA)
     
 ### ProtT5_XL_U50.py
