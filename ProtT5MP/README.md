@@ -22,7 +22,7 @@ Para poder realizar finteunign, se juntan todas las particiones originales de lo
 Se ajustan en un df organizado de la siguiente manera.....
 
 ## Entrenamiento -Fine-tuning
-(En este notebook se hizo con X epócas, sin embargo en realidad se realizaron 20)
+(En este notebook se hizo con 5 epócas, sin embargo en realidad se realizaron 20)
 
 ## Evaluacion
 metricas 
