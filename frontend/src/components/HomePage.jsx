@@ -1,5 +1,5 @@
 // src/components/HomePage.js
-import React, { useState } from 'react';
+import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
@@ -10,20 +10,20 @@ import Card from 'react-bootstrap/Card';
 
 //import proteinBanner from '/src/images/model-architecture.png'; // Add this image
 
-import proteinBanner from '../images/model-architecture.png';
+import proteinBanner from '../images/Logo_ProtT5MP.png';
 
 const HomePage = () => {
-  const [show, setShow] = useState(false);
+  //const [show, setShow] = useState(false);
 
   // Functions for modal
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  //const handleClose = () => setShow(false);
+  //const handleShow = () => setShow(true);
 
   return (
     <Container className="home-page" style={{ marginBottom: 50 }}>
       <Row className="justify-content-center">
         <Col sm="8" className="text-center">
-          <h1 className="banner">Welcome to Protein Thermal Stability Predictor</h1>
+          <h1 className="banner">Bienvenidos a ProtT5MP</h1>
         </Col>
         <hr className="custom-hr" />
         
@@ -32,8 +32,8 @@ const HomePage = () => {
           <Image src={proteinBanner} alt="Protein Structure" fluid />
           
           {/* Centered round button */}
-          <Button
-  onClick={handleShow}
+          {/* <Button
+  //onClick={handleShow}
   style={{
     position: 'absolute',
     top: '50%',
@@ -54,7 +54,7 @@ const HomePage = () => {
   }}
 >
   Welcome!
-</Button>
+</Button> */}
         </Col>
       </Row>
 
@@ -64,22 +64,26 @@ const HomePage = () => {
           <Card>
             <Card.Body>
               <Card.Title style={{ textAlign: 'center', fontSize: '1.5rem', fontWeight: 'bold' }}>
-                Protein Thermal Stability Analysis Project
+                Proyecto de Análisis de Estabilidad Térmica de Proteínas
               </Card.Title>
               <Card.Text style={{ textAlign: 'justify', fontSize: '1.2rem' }}>
-                Protein thermal stability is an important parameter for understanding protein function, designing protein-based therapeutics, and improving the stability of enzymes used in industrial processes.
+                La predicción de la estabilidad térmica de proteínas, en particular de la temperatura de fusión (Tm), ha sido de gran importancia para aplicaciones en biotecnología, farmacología e ingeniería de enzimas. Aunque existen modelos computacionales que permiten estimar este valor, la mayoría de los enfoques previos se han basado exclusivamente en información derivada de la secuencia de aminoácidos. 
+              </Card.Text>
+              <Card.Text style={{ textAlign: 'justify', fontSize: '1.2rem',  }}>
+                En este trabajo, se propuso integrar datos derivados de la estructura tridimensional de proteínas, evaluando su utilidad mediante un enfoque exploratorio basado en aprendizaje automático. Se utilizó un conjunto de 29.779 proteínas con secuencias disponibles, y se obtuvo información estructural a partir de la base de datos AlphaFold. A partir de estos datos, se generaron representaciones vectoriales (embeddings) tanto de secuencia como de estructura, que fueron empleadas como entrada para diferentes modelos de regresión, tanto de forma individual como en combinaciones secuencia-estructura. 
               </Card.Text>
               <Card.Text style={{ textAlign: 'justify', fontSize: '1.2rem' }}>
-                Our machine learning model uses advanced deep learning techniques to analyze amino acid sequences and predict the melting point temperature of proteins. This helps researchers engineer more stable proteins and understand the relationship between sequence and thermal properties.
+                Los resultados iniciales mostraron que, si bien la inclusión de información estructural permitió mejorar el desempeño  de los modelos  al ser concatenados con ciertos embeddings de secuencia, el mejor desempeño se observó con un embedding de secuencia únicamente: ProtT5-XL-U50, que superó tanto a las representaciones individuales como a las combinadas. A partir de estos hallazgos, se seleccionó dicho modelo y se implementó una estrategia de fine-tuning utilizando LoRA, lo cual permitió alcanzar un coeficiente de determinación (R²) de 0.91 y un error absoluto medio (MAE) de 3.72 °C, en comparación con un modelo de referencia previo que reportaba valores de 0.77 y 6.44 °C, respectivamente. Finalmente, el modelo optimizado fue desplegado como una aplicación web interactiva.  
               </Card.Text>
-              <Card.Text style={{ textAlign: 'justify', fontSize: '1.2rem' }}>
-                <strong>User Story:</strong> "As a researcher working with proteins, I want to predict the thermal stability of my protein sequences, so that I can understand their behavior under different temperature conditions and engineer more stable variants."
+
+              <Card.Text style={{ textAlign: 'center', fontSize: '1.2rem', fontWeight: 'bold' }}>
+                <strong>Historia de Usuario:</strong> "Como investigador que trabaja con proteínas, quiero predecir la estabilidad térmica de mis secuencias de proteínas, para poder entender su comportamiento bajo diferentes condiciones de temperatura y diseñar variantes más estables."
               </Card.Text>
-              <Card.Text style={{ textAlign: 'justify', fontSize: '1.2rem' }}>
-                <strong>Target Users:</strong> The application is designed for biochemists, protein engineers, pharmaceutical researchers, and biotechnology companies working with proteins and enzymes.
-              </Card.Text>
+
+              
               <Card.Text style={{ textAlign: 'center', fontSize: '1.3rem', fontWeight: 'bold' }}>
-                We invite you to explore the application and make predictions for your protein sequences!
+                Te invitamos a explorar la aplicación y hacer predicciones para tus secuencias de proteínas!
+
               </Card.Text>
             </Card.Body>
           </Card>
@@ -90,7 +94,7 @@ const HomePage = () => {
       </Row>
 
       {/* Welcome Modal */}
-      <Modal show={show} onHide={handleClose}>
+      {/* <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Welcome to the Protein Stability Predictor</Modal.Title>
         </Modal.Header>
@@ -105,7 +109,7 @@ const HomePage = () => {
             Close
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
 
       {/* Animation styles */}
       <style type="text/css">

@@ -1,7 +1,8 @@
 // src/components/Header.js
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import logo from '../images/protein-logo.jpg'; // Add this image to your project
+import logo from '../images/Logo_ProtT5MP.PNG'; // Add this image to your project
+
 
 const Header = () => {
   return (
@@ -15,17 +16,17 @@ const Header = () => {
             className="d-inline-block align-top"
             alt="Logo"
           />
-          {' '} Protein Stability Predictor
+          {' '} ProtT5MP
         </Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/technical">Technical Details</Nav.Link>
-          <Nav.Link href="/prediction">Make Prediction</Nav.Link>
+          <Nav.Link href="/">Inicio</Nav.Link>
+          {/* <Nav.Link href="/technical">Technical Details</Nav.Link> */}
+          <Nav.Link href="/prediction">Hacer Predicción</Nav.Link>
         </Nav>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            ML Protein Analysis Project
+            Proyecto de Análisis de Proteínas con ML
           </Navbar.Text>
         </Navbar.Collapse>
       </Container>
