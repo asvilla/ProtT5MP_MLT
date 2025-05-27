@@ -22,7 +22,7 @@ Se realizaron 2 tipos de embeddings: estructura y secuencia.
     En este archivo se generan embeddings con ProtT5-XL-U50 [2]
     
 ### Foldseek_3di.py
-    Para poder realizar el embedding con Prost5 se debe tener como archivo de entrada en vez de archivo PDB una secuencia 3DI, en este codigo se hace la transformación de formato con Foldseek y ... [3]
+    Para poder realizar el embedding con Prost5 se debe tener como archivo de entrada en vez de archivo PDB una secuencia 3DI, en este codigo se hace la transformación de formato con Foldseek [3]
     
 ### Prost5.ipynb
     En este archivo se generan embeddings con Prost5 [4]
