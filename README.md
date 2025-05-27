@@ -16,29 +16,10 @@ La estabilidad térmica de las proteínas es una propiedad crítica para diversa
 - Embeddings de estructura generados con ProstT5, a partir de estructuras predichas por AlphaFold.
 
 
-## Estructura del repositorio ESTO HAY QUE ORGANIZARLO BIEN, ESTE ES UN EJEMPLO
+## ¿ Cómo entrenar y correr el modelo ?
 
-```
-ProtT5MP/
-│
-├── data/                  # Scripts y enlaces para obtener y procesar los datos
-│   ├── download/          # Scripts para descargar PDBs y estructuras AlphaFold
-│   └── processed/         # Datos finales usados en el entrenamiento
-│
-├── notebooks/             # Jupyter notebooks de análisis y entrenamiento
-│  
-│
-├── models/                # Modelos entrenados y serializados (.pkl o .pt)
-│
-├── ProtT5MP/               # Guía de entrenamiento de nuestro mejor modelo.
-│
-│
-└── README.md              # Este archivo
-```
-
-## Cómo ejecutar
-
-Las instrucciones o guía de entrenamiento se encuentran en la carpeta ProtT5MP de nuestro modelo final.
+Las instrucciones o guía de entrenamiento se encuentran en la carpeta `ProtT5MP` de nuestro modelo final. 
+Las instrucciones del despliegue se encuentran en la carpeta `backend`
 
 
 ## Citas mas relevantes
